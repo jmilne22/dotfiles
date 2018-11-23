@@ -64,6 +64,12 @@ ZSH_THEME="powerlevel9k/powerlevel9k"
 plugins=(
   git
   zsh-autosuggestions
+  z
+  extract
+  copydir
+  copyfile
+  colorize
+  colored-man-pages
 )
 
 source $ZSH/oh-my-zsh.sh
@@ -96,6 +102,9 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+  
+alias v=vim
+
  if [ $TILIX_ID ] || [ $VTE_VERSION ]; then
         source /etc/profile.d/vte.sh
 fi
