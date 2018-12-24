@@ -105,6 +105,7 @@ source $ZSH/oh-my-zsh.sh
   
 alias v=vim
 alias update='sudo apt update && sudo apt upgrade'
+alias clean='sudo apt autoremove -y'
  if [ $TILIX_ID ] || [ $VTE_VERSION ]; then
         source /etc/profile.d/vte.sh
 fi
