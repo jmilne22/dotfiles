@@ -13,10 +13,10 @@ return require('packer').startup(function(use)
   use { 'nvim-tree/nvim-tree.lua' }					 -- Tree thing
   use { 'nvim-tree/nvim-web-devicons' }              -- Optional, for file icons
   use { 'vim-airline/vim-airline' }                  -- Status bar
-  use { 'neoclide/coc.nvim' }			             -- Auto Complete
+  use { 'neoclide/coc.nvim' }                        -- Auto Complete
   use { 'terryma/vim-multiple-cursors' }             -- Multiple Cursors
-  use { 'tpope/vim-surround' }					     -- Surround with quotes
-  use { 'mhinz/vim-startify' }					     -- Start Screen
+  use { 'tpope/vim-surround' }                       -- Surround with quotes
+  use { 'mhinz/vim-startify' }                       -- Start Screen
   use { 'ryanoasis/vim-devicons' }                   -- Developer Icons
 
 end)
