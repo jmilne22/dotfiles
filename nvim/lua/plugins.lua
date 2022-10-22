@@ -10,7 +10,7 @@ return require('packer').startup(function(use)
   use { 'tpope/vim-fugitive' }                       -- git integration
   use { 'junegunn/gv.vim' }                          -- commit history
   use { 'windwp/nvim-autopairs' }                    -- auto close brackets, etc.
-  use { 'nvim-tree/nvim-tree.lua' }					 -- Tree thing
+  use { 'nvim-tree/nvim-tree.lua' }                  -- Tree thing
   use { 'nvim-tree/nvim-web-devicons' }              -- Optional, for file icons
   use { 'vim-airline/vim-airline' }                  -- Status bar
   use { 'neoclide/coc.nvim' }                        -- Auto Complete
