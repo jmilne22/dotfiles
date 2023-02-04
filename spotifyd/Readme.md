@@ -7,7 +7,5 @@
 # Enables the service; it should autostart on boot
 `systemctl enable --user spotifyd.service`
 
-# Disables the service; it should stop autostarting on boot
-
 # Checks how the service is going
 `systemctly status --user spotifyd.service`
