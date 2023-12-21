@@ -7,8 +7,11 @@
 
 #waybar {
   background: @base;
-  font-family: JetBrainsMono Nerd Font;
-  color: @text;
+  font-family: JetBrains Mono Nerd Font, Roboto, Helvetica, Arial, sans-serif;
+  font-size: 13px;
+  min-height: 0;
+  color: black;
+  border-radius: 2px;
   background: @base;
 }
 
@@ -17,7 +20,7 @@
 }
 
 #workspaces button {
-  margin: 4px 0;
+  margin: 8px 4px;
   padding: 0 4px;
   color: @white;
 }
@@ -25,6 +28,7 @@
 #workspaces button.active {
   border-radius: 4px;
   background-color: @green;
+  color: black;
 }
 
 #workspaces button.urgent {
@@ -32,9 +36,7 @@
 }
 
 #tray {
-  margin: 4px 4px 4px 4px;
   border-radius: 4px;
-  background-color: @surface1;
 }
 
 #tray * {
@@ -47,9 +49,9 @@
 }
 
 #mode, #battery, #cpu, #memory, #network, #pulseaudio, #idle_inhibitor, #backlight, #custom-storage, #custom-updates, #custom-weather, #custom-mail, #clock, #temperature {
-  margin: 4px 2px;
+  margin: 8px 4px;
   padding: 0 6px;
-  background-color: @surface1;
+  background-color: @green;
   border-radius: 4px;
   min-width: 20px;
 }
@@ -63,13 +65,14 @@
 }
 
 #clock {
-  margin-left: 0px;
+  margin-left: 4px;
   margin-right: 4px;
-  background-color: transparent;
+  background-color: @green;
 }
 
 #window {
   font-size: 0.9em;
 	font-weight: 400;
 	font-family: sans-serif;
+	color: @text;
 }

@@ -10,18 +10,16 @@
     "modules-left": [
         "hyprland/workspaces",
 	"idle_inhibitor",
-	"pulseaudio",
-	"network"
     ],
 
     "modules-center": ["hyprland/window"],
 
     "modules-right": [
+    	"pulseaudio",
         "cpu",
 	"memory",
 	"temperature",
 	"battery",
-	"tray",
 	"clock"
     ],
 
@@ -36,14 +34,11 @@
         "on-click": "activate",
         "format": "{icon}",
         "format-icons": {
-	    "1": "1",
-	    "2": "2",
-	    "3": "3",
-	    "4": "4",
-	    "5": "5",
-	    "urgent": "",
-            "focused": "",
-            "default": ""
+	    "1": "",
+	    "2": "",
+	    "3": "",
+	    "4": "",
+	    "5": "",
 	}
     },
 
@@ -100,7 +95,7 @@
             "phone": "",
             "portable": "",
             "car": "",
-            "default": ["", "", ""]
+	    "default": ["", "", ""]
         },
         "on-click": "pavucontrol"
     },
