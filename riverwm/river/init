@@ -16,7 +16,8 @@
 # Autostart
 riverctl spawn "waybar"
 riverctl spawn "mako"
-
+riverctl spawn "wl-clipboard"
+riverctl spawn "/usr/lib/polkit-kde-authentication-agent-1"
 
 # Mappings
 riverctl map normal Super+Shift Return spawn "kitty"
