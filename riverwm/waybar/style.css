@@ -1,0 +1,105 @@
+@define-color foreground-color  #cdd6f4;
+@define-color background-color  #031033;
+@define-color border-color      #313244;
+@define-color disabled-color    #928374;
+@define-color alert-color       #FB4934;
+@define-color active-color      #a6e3a1;
+@define-color highlight-color   #f9e2af;
+
+* {
+    transition: none;
+    box-shadow: none;
+}
+
+#waybar {
+    background: rgba(3, 16, 51, 0.85); /* Slightly transparent background */
+    font-family:
+        JetBrainsMono Nerd Font,
+        Roboto,
+        Helvetica,
+        Arial,
+        sans-serif;
+    font-size: 17px;
+    min-height: 0;
+    color: @foreground-color;
+    border-radius: 2px;
+}
+
+#tags {
+    background-color: transparent;
+    border-radius: 0;
+}
+
+#tags button {
+    border-radius: 8px; /* Rounded corners */
+    padding: 4px 10px; /* Adjust padding to complement the larger font */
+    margin: 2px 4px; /* Consistent spacing between tags */
+}
+
+#tags button.occupied {
+    color: @foreground-color;
+}
+
+#tags button.focused {
+    color: @highlight-color;
+}
+
+#tags button.urgent {
+    color: @alert-color;
+}
+
+#tray {
+    border-radius: 4px;
+}
+
+#tray * {
+    padding: 0 6px;
+    border-left: 1px solid @background-color;
+}
+
+#tray *:first-child {
+    border-left: none;
+}
+
+#mode,
+#battery,
+#cpu,
+#memory,
+#network,
+#pulseaudio,
+#idle_inhibitor,
+#backlight,
+#custom-storage,
+#custom-updates,
+#custom-weather,
+#custom-mail,
+#clock,
+#temperature {
+    margin: 8px 4px;
+    padding: 0 15px;
+    background-color: @foreground-color;
+    color: @border-color;
+    border-radius: 4px;
+    min-width: 20px;
+}
+
+#pulseaudio.muted {
+    color: @highlight-color;
+}
+
+#temperature.critical {
+    color: @highlight-color;
+}
+
+#clock {
+    margin-left: 4px;
+    margin-right: 4px;
+    background-color: @foreground-color;
+    color: @border-color;
+}
+
+#window {
+    font-size: 0.9em;
+    font-weight: 400;
+    color: @foreground-color;
+}

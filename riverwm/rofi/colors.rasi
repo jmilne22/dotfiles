@@ -1,0 +1,123 @@
+// vim:ft=css:
+* {
+  font:                   "JetBrainsMono Nerd Font 10";
+  foreground:             #cdd6f4; /* Replaced with @fg */
+  background:             #1e1e2e; /* Replaced with @bg */
+  highlight:              #f9e2af; /* Replaced with @highlight */
+
+  pink:                   #D99887;
+  old-highlight:          #F1594F;
+  red:                    #FB4934; /* Replaced with @alert */
+  darkred:                #973D46;
+  yellow:                 #F2C395;
+  darkyellow:             #E0AE4A;
+  lightblue:              #888CA7;
+  oldforeground:          #87A2AA;
+  altblue:                #ACBAF9;
+  altwhite:               #f5f5f5; /* Replaced with @white */
+  white:                  #f5f5f5; /* Replaced with @white */
+
+  b5:                     #1B1E25;
+  b4:                     #04142D;
+  b3:                     #091F2D;
+  b2:                     #1e1e2e; /* Replaced with @bg */
+  b1:                     #333333;
+
+  lightgray:              #777777;
+  mediumgray:             #454545;
+  darkgray:               #232323;
+  black:                  #111111;
+  darkblack:              #000000;
+}
+
+element-icon {
+  /* Better to increase the whole element size with dpi */
+  /* size: 22; */
+}
+
+element-text {
+  highlight:        #f9e2af; /* Replaced with @highlight */
+}
+
+window {
+  border-color:     #cdd6f4; /* Replaced with @foreground */
+}
+
+inputbar {
+  text-color:       #cdd6f4; /* Replaced with @foreground */
+  background-color: #1e1e2e; /* Replaced with @background */
+}
+
+prompt {
+  text-color:       #cdd6f4; /* Replaced with @foreground */
+  background-color: #1e1e2e; /* Replaced with @background */
+}
+
+textbox-prompt-colon {
+  text-color:       #cdd6f4; /* Replaced with @foreground */
+  background-color: #1e1e2e; /* Replaced with @background */
+}
+
+message {
+  text-color:       #cdd6f4; /* Replaced with @foreground */
+  background-color: #1e1e2e; /* Replaced with @background */
+}
+
+entry {
+  text-color:       #cdd6f4; /* Replaced with @foreground */
+  background-color: #1e1e2e; /* Replaced with @background */
+}
+
+listview {
+  background-color: #1e1e2e; /* Replaced with @background */
+}
+
+mode-switcher {
+  text-color:       #cdd6f4; /* Replaced with @foreground */
+  background-color: #1e1e2e; /* Replaced with @background */
+}
+
+button {
+  text-color:       #cdd6f4; /* Replaced with @foreground */
+  background-color: #1e1e2e; /* Replaced with @background */
+}
+
+button selected {
+  text-color:       #1e1e2e; /* Replaced with @background */
+  background-color: #cdd6f4; /* Replaced with @foreground */
+}
+
+element {
+  text-color:       #cdd6f4; /* Replaced with @foreground */
+  background-color: #1e1e2e; /* Replaced with @background */
+}
+
+element normal.normal {
+  background-color: #1e1e2e; /* Replaced with @background */
+  text-color:       #cdd6f4; /* Replaced with @foreground */
+}
+
+element normal.active {
+  background-color: #1e1e2e; /* Replaced with @background */
+  text-color:       #cdd6f4; /* Replaced with @foreground */
+}
+
+element selected.normal {
+  text-color:       #1e1e2e; /* Replaced with @background */
+  background-color: #cdd6f4; /* Replaced with @foreground */
+}
+
+element selected.active {
+  background-color: #cdd6f4; /* Replaced with @foreground */
+  text-color:       #1e1e2e; /* Replaced with @background */
+}
+
+element alternate.normal {
+  background-color: #1e1e2e; /* Replaced with @background */
+  text-color:       #cdd6f4; /* Replaced with @foreground */
+}
+
+element alternate.active {
+  background-color: #1e1e2e; /* Replaced with @background */
+  text-color:       #cdd6f4; /* Replaced with @foreground */
+}

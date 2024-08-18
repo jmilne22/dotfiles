@@ -1,0 +1,97 @@
+// vim:ft=css
+configuration {
+  modi:                 "drun,run,filebrowser";
+  dpi:                  90;
+  icon-theme:           "Papirus";
+  show-icons:           true;
+  terminal:             "footclient";
+  disable-history:      false;
+  max-history-size:     50;
+
+  display-drun:         " Apps"; // 󰀻
+  display-run:          " Runs";
+  display-nerdy:        "󰱨 Nerdy";
+  display-emoji:        "󰱨 Emoji";
+  display-window:       " Windows";
+  display-filebrowser:  " Files";
+	display-ssh:          "󰣀 SSH";
+	display-keys:         " Keys";
+
+  filebrowser {
+    directory: "/home/user/";
+  }
+}
+
+@import "colors"
+
+window {
+  /*Removing height make the window height equal to num of opts*/
+  /*height: 40%;*/
+  width: 40%;
+  orientation: vertical;
+  location: north;
+  anchor: north;
+  x-offset: 0px;
+  y-offset: 0px;
+  margin: 5px;
+  border: 2px;
+  border-radius: 5px;
+  padding: 5px;
+  spacing: 0;
+  children: [ mainbox ];
+}
+
+mainbox {
+  spacing: 0;
+  children: [ inputbar, mode-switcher, listview ];
+}
+
+inputbar {
+  spacing: 0px;
+  /*padding: top right bottom left*/
+  padding: 0px 5px 5px;
+  children: [ "textbox-prompt-colon", entry ];
+}
+
+textbox-prompt-colon {
+  expand: false;
+  padding: 0px 5px;
+  border-radius: 5px;
+  str: " "; /* */
+}
+
+entry {
+  placeholder:  "Search...";
+  padding: 0px 5px;
+  border-radius: 5px;
+}
+
+mode-switcher {
+  margin: 5px;
+  orientation: horizontal;
+}
+
+button {
+  border-radius: 5px;
+}
+
+listview {
+  scrollbar: false;
+  lines: 6;
+  cycle: false;
+  dynamic: true;
+  spacing: 0px;
+  /* List view has the dash border, Remove it here */
+  /*border: 0px;*/
+
+  padding: 10px;
+  border: 1px;
+  border-radius: 5px;
+  margin: 5px;
+}
+
+element {
+  border: 0;
+  padding: 3px;
+  border-radius: 5px;
+}
