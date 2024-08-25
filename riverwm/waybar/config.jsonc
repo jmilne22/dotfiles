@@ -9,14 +9,32 @@
     "margin-bottom": 0,
     "spacing": 1,
   
-    "modules-left": ["river/tags"],
-    "modules-center": ["river/window"],
+    "modules-left": ["river/tags", "sway/workspaces"],
+    "modules-center": ["river/window", "sway/window"],
     "modules-right": ["pulseaudio", "cpu", "clock", "tray"],
   
     "river/tags": {
       "num-tags": 4,
       "tag-labels": ["󰈹", "󰭹", "", ""],
     },
+
+    "sway/mode": {
+		"format": "{}",
+		"tooltip": false
+	  },
+
+	"sway/window": {
+		"format": "{}",
+		"max-length": 30,
+		"tooltip": false
+	  },
+
+	"sway/workspaces": {
+		"disable-scroll-wraparound": true,
+		"smooth-scrolling-threshold": 4,
+		"enable-bar-scroll": true,
+		"format": "{name}"
+	  },
   
     "keyboard-state": {
       "numlock": true,
