@@ -9,9 +9,9 @@
     "margin-bottom": 0,
     "spacing": 1,
   
-    "modules-left": ["sway/mode", "river/tags", "sway/workspaces"],
-    "modules-center": ["river/window", "sway/window"],
-    "modules-right": ["pulseaudio", "cpu", "clock", "tray"],
+    "modules-left": ["river/tags", "sway/workspaces", "river/window"],
+    "modules-center": ["custom/media"],
+    "modules-right": ["pulseaudio", "battery", "clock", "tray"],
   
     "river/tags": {
       "num-tags": 4,
@@ -19,23 +19,23 @@
     },
 
     "sway/mode": {
-      "format": "{}",
-      "tooltip": false
+		"format": "{}",
+		"tooltip": false
 	  },
 
-    "sway/window": {
-      "format": "{}",
-      "max-length": 30,
-      "tooltip": false
-    },
+	"sway/window": {
+		"format": "{}",
+		"max-length": 30,
+		"tooltip": false
+	  },
 
-    "sway/workspaces": {
-      "disable-scroll-wraparound": true,
-      "smooth-scrolling-threshold": 4,
-      "enable-bar-scroll": true,
-      "format": "{name}"
-    },
-    
+	"sway/workspaces": {
+		"disable-scroll-wraparound": true,
+		"smooth-scrolling-threshold": 4,
+		"enable-bar-scroll": true,
+		"format": "{name}"
+	  },
+  
     "keyboard-state": {
       "numlock": true,
       "capslock": true,
@@ -155,7 +155,7 @@
     "custom/media": {
       "format": "{icon} {}",
       "return-type": "json",
-      "max-length": 40,
+      "max-length": 100,
       "format-icons": {
         "spotify": "",
         "default": "🎜",
