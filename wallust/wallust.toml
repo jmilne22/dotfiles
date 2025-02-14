@@ -1,0 +1,16 @@
+backend = "full"
+color_space = "lch"
+palette = "dark"
+
+[templates]
+#macchina.template = 'templates/colors-macchina.toml'
+#macchina.target = '~/.config/macchina/themes/wallust.toml'
+
+rofi.template = 'colors-rofi.rasi'
+rofi.target = '~/.config/rofi/colors.rasi'
+
+swaync.template = 'colors-swaync.css'
+swaync.target = '~/.config/swaync/themes/wallust/colors-wallust.css'
+
+waybar.template = 'colors-waybar.css'
+waybar.target = '~/.config/waybar/wallust.css'
