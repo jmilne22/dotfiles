@@ -14,6 +14,7 @@ swayidle -w -C ~/.config/swayidle/ensure-lock-hyprlock-minimal &
 swayidle -C ~/.config/swayidle/idle &
 pipewire &
 mako &
+wl-clipboard &
 /usr/libexec/polkit-gnome-authentication-agent-1 &
 
 # WINDOW MANAGER SETTINGS
@@ -112,4 +113,3 @@ riverctl rule-add -app-id "bar" csd
 # BACKGROUND AND EFFECTS
 swaybg -i ~/Pictures/Wallpapers/cs.jpg -m fill &
 wlsunset -l 32.109333 -L 34.855499
-
