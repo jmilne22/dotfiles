@@ -3,19 +3,13 @@
     "layer": "top",
     "position": "top",
     "height": 30,
-    "margin-left": 0,
-    "margin-right": 0,
-    "margin-top": 0,
-    "margin-bottom": 0,
-    "spacing": 1,
-  
     "modules-left": ["river/tags", "sway/workspaces", "river/window"],
     "modules-center": ["custom/media"],
-    "modules-right": ["pulseaudio", "battery", "clock", "tray"],
+    "modules-right": ["network", "pulseaudio", "battery", "clock"],
   
     "river/tags": {
       "num-tags": 4,
-      "tag-labels": ["󰈹", "󰭹", "", ""],
+      "tag-labels": ["1", "2", "3", "4"],
     },
 
     "sway/mode": {
@@ -61,9 +55,9 @@
     },
   
     "clock": {
-      // "timezone": "America/New_York",
-      "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
+      "format": " {:%a, %b %d, %Y - %H:%M }",
       "format-alt": "{:%Y-%m-%d}",
+      "tooltip-format": "{calendar}",
     },
   
     "cpu": {
@@ -98,8 +92,8 @@
       },
       "format": "{capacity}% {icon}",
       "format-full": "{capacity}% {icon}",
-      "format-charging": "{capacity}% ",
-      "format-plugged": "{capacity}% ",
+      "format-charging": "{capacity}% ",
+      "format-plugged": "{capacity}% ",
       "format-alt": "{time} {icon}",
       // "format-good": "", // An empty format will hide the module
       // "format-full": "",
@@ -124,7 +118,7 @@
   
     "network": {
       // "interface": "wlp2*", // (Optional) To force the use of this interface
-      "format-wifi": "{essid} ({signalStrength}%) ",
+      "format-wifi": "󰤨 Wi-Fi",
       "format-ethernet": "{ipaddr}/{cidr} ",
       "tooltip-format": "{ifname} via {gwaddr} ",
       "format-linked": "{ifname} (No IP) ",
@@ -133,11 +127,11 @@
     },
   
     "pulseaudio": {
-      // "scroll-step": 1, // %, can be a float
-      "format": "{volume}% {icon} {format_source}",
+      "scroll-step": 5, // %, can be a float
+      "format": "{icon} {volume}%",
       "format-bluetooth": "{volume}% {icon} {format_source}",
       "format-bluetooth-muted": " {icon} {format_source}",
-      "format-muted": " {format_source}",
+      "format-muted": "  Muted",
       "format-source": "{volume}% ",
       "format-source-muted": "",
       "format-icons": {
@@ -149,6 +143,7 @@
         "car": "",
         "default": ["", "", ""],
       },
+      "tooltip-format": "{volume}% volume",
       "on-click": "pavucontrol",
     },
   

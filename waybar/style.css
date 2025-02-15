@@ -1,69 +1,66 @@
-@define-color fg #F5F5F5;
-@define-color bg rgba(0,0,22,0.75);
-@define-color bordercolor #F7E5F5;
-@define-color disabled #A5A5A5;
-@define-color alert #F53C3C;
-@define-color activegreen #26A65B;
-@define-color highlight #F2C187;
+/* -----------------------------------------------------
+ *                      Config
+ * ----------------------------------------------------- */
+/* Colors */
+@define-color bg    rgba(22,22,22,0.5);  /* More transparent background */
+@define-color bg2   #262626;
+@define-color bg3   #393939;
+@define-color bg4   #525252;
+@define-color fg    #D8D8D8;
+@define-color fg2   #c6c6c6;
+@define-color red   #DA1E28;
+@define-color blue  #78A9FF;
+@define-color purple #BE95FF;
 
 * {
-  min-height: 0;
-  font-family: "JetBrainsMono Nerd Font", Roboto, Helvetica, Arial, sans-serif;
-  font-size: 17px;
-}
-
-window#waybar {
-  color: @fg;
-  background: @bg;
-  transition-property: background-color;
-  transition-duration: 0.5s;
-  /* border: 2px solid @bordercolor; */
-}
-
-button {
-  /* Use box-shadow instead of border so the text isn't offset */
-  box-shadow: inset 0 -3px transparent;
-  /* Avoid rounded borders under each button name */
-  border: none;
+  font-family:
+    JetBrains Mono,
+    Symbols Nerd Font Mono,
+    sans-serif;
+  font-size: 14px;
   border-radius: 0;
-  padding: 0px 5px;
-  margin: 3px 0px;
+  border: none;
+  box-shadow: none;
+  transition: none;
 }
 
-/* https://github.com/Alexays/Waybar/wiki/FAQ#the-workspace-buttons-have-a-strange-hover-effect */
-button:hover {
-  background: inherit;
-  box-shadow: inset 0 -3px transparent;
+/* -----------------------------------------------------
+ *                      Window
+ * ----------------------------------------------------- */
+window#waybar {
+  background-color: @bg;
 }
 
-#workspaces button {
+#window {
+  color: @fg;
+  padding: 0 10px;
+}
+
+/* -----------------------------------------------------
+ *                      Tooltip
+ * ----------------------------------------------------- */
+tooltip {
+  background: @bg;
+  border: solid 1px @bg3;
+}
+
+tooltip label {
   color: @fg;
 }
 
-#workspaces button.urgent {
-  color: @alert;
-}
-#workspaces button.empty {
-  color: @bordercolor;
-}
-
-#workspaces button.active {
-  color: @highlight;
-}
-
-/*River Tags/Workspaces*/
+/* -----------------------------------------------------
+ *                  River Tags
+ * ----------------------------------------------------- */
 #tags {
-  background-color: transparent;
-  border-radius: 0px;
+  padding: 0px 5px;
 }
 
 #tags button {
-  color: @bordercolor;
-  /* background: @bg; */
-  /* If you need round border icons
-  border-radius: 20px;
+  /* Set default tag color to foreground for consistency */
+  color: @fg;
   padding: 0px 5px;
-  margin: 3px 0px; */
+  font-weight: normal;
+  margin: 2px 2px;
 }
 
 #tags button.occupied {
@@ -71,93 +68,69 @@ button:hover {
 }
 
 #tags button.focused {
-  color: @highlight;
+  /* Add a subtle background to indicate focus */
+  background-color: @bg3;
+  border-radius: 2px;
 }
 
 #tags button.urgent {
-  color: @alert;
+  /* Use red-ish color for urgent states */
+  color: @red;
 }
 
-#clock,
+/* Remove any hover effects on tags */
+button:hover {
+  background-color: rgba(22,22,22,0.7);
+  box-shadow: none;
+}
+
+/* -----------------------------------------------------
+ *                      Modules
+ * ----------------------------------------------------- */
 #battery,
+#custom-pipewire,
+#custom-mic,
+#custom-media,
 #cpu,
 #memory,
-#disk,
-#temperature,
-#language,
-#backlight,
-#backlight-slider,
-#network,
-#pulseaudio,
-#wireplumber,
-#wireplumber,
-#custom-media,
-#taskbar,
+#custom-swayidle,
 #tray,
-#tray menu,
-#tray > .needs-attention,
-#tray > .passive,
-#tray > .active,
-#mode,
-#idle_inhibitor,
-#scratchpad,
-#custom-power,
-#custom-notification,
-#window,
-#mpd {
-  padding: 0px 3px;
-  padding-right: 5px;
-  margin: 3px 3px;
-  color: @bordercolor;
+#network,
+#pulseaudio {
+  color: @fg;
+  padding: 0 8px;
 }
 
-#custom-separator {
-  color: @bordercolor;
+#tray menu {
+  background-color: @bg;
+  border: solid 1px @bg3;
+}
+
+#custom-weather {
+  color: @fg2;
+  padding-left: 10px;
+}
+
+#custom-sep,
+#custom-markl,
+#custom-markr {
+  color: @bg4;
+  padding: 0 4px;
+}
+
+#mpris {
+  color: @fg2;
+  padding: 0 10px;
+}
+
+#custom-clock,
+#clock {
+  color: @fg;
+  padding: 0 4px;
 }
 
 #custom-power {
   color: @fg;
-  padding-left: 10px;
+  padding: 0 10px;
 }
 
-#tray {
-  background-color: @bg;
-  border-radius: 20px;
-  padding: 0px 5px;
-  margin: 5px;
-}
-
-#network.disconnected,
-#pulseaudio.muted,
-#wireplumber.muted {
-  color: @alert;
-}
-
-#battery.charging,
-#battery.plugged {
-  color: @activegreen;
-}
-
-label:focus {
-  background-color: @bg;
-}
-
-#battery.critical:not(.charging) {
-  background-color: @alert;
-  color: @fg;
-  animation-name: blink;
-  animation-duration: 0.5s;
-  animation-timing-function: linear;
-  animation-iteration-count: infinite;
-  animation-direction: alternate;
-}
-
-/* If workspaces is the leftmost module, omit left margin */
-.modules-left > widget:first-child > #workspaces {
-  margin-left: 0;
-}
-
-/* If workspaces is the rightmost module, omit right margin */
-.modules-right > widget:last-child > #workspaces {
-  margin-right: 0;
-}
