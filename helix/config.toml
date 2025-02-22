@@ -1,0 +1,24 @@
+theme = "tokyonight"
+
+[editor]
+line-number = "relative"
+true-color = true
+bufferline = "multiple"
+cursor-shape.normal = "block"
+cursor-shape.insert = "bar"
+cursor-shape.select = "underline"
+statusline.right = [
+  "version-control",
+  "spacer",
+  "diagnostics",
+  "file-type",
+  "position",
+]
+indent-guides.render = true
+end-of-line-diagnostics = "hint"
+inline-diagnostics.cursor-line = "error"
+
+[keys.normal]
+G = "goto_file_end"
+X = "extend_line_above"
+V = ["extend_line_below", "select_mode"]
